@@ -10,16 +10,16 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * Servlet implementation class HelloServlet
+ * Servlet implementation class TenServlet
  */
-@WebServlet("/HelloServlet")
-public class HelloServlet extends HttpServlet {
+@WebServlet("/ten")
+public class TenServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public HelloServlet() {
+    public TenServlet() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -30,7 +30,11 @@ public class HelloServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		response.setContentType("text/html;charset=UTF-8");
 		PrintWriter out = response.getWriter();
-		out.print("<h1>Hello Servlet</h1>");
+		out.println("<h1>1-10까지 출력!!</h1>");
+		for(int i=1; i<=10; i++) {
+			out.print(i+"<br>");
+		}
+		out.close();
 	}
 
 }
